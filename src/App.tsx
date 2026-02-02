@@ -17,7 +17,7 @@ function App() {
   const [done, setDone ] = useState<boolean>(false);
 
   const [text, setText] = useState<string>("Andrea, will you be my valentines?");
-  const [yesButton, setYesButton] = useState<string>("text-4xl");
+  const [yesButton, setYesButton] = useState<string>("text-3xl");
   const [noButton, setNoButton] = useState<string>(" text-xl");
 
 
@@ -28,26 +28,33 @@ function App() {
     switch (newClicks){
       case 1:
         setImage(thumbsDown);
-        setText("Andrea... that was not nice.... will you be my valentines?");
+        setText("Andrea... that was not nice.. will you be my valentines?");
+        setYesButton("text-4xl");
+        setNoButton("text-lg");
+        break;
+
+      case 2:
+        setImage(anvil);
+        setText("WOW!!! Really!? will you?");
         setYesButton("text-5xl");
         setNoButton("text-lg");
         break;
 
-      
-      case 2:
+
+      case 3:
         setImage(bomb);
         setText("Ok that just hurts :( please?");
         setYesButton("text-6xl");
         setNoButton("text-md");
         break;
       
-      case 3:
+      case 4:
         setImage(mad);
-        setText("I would appreciate you saying yes! will you?");
+        setText("I would appreciate you saying yes! PLEASEE!?");
         setYesButton("text-7xl");
         setNoButton("text-sm");
         break;
-      case 4:
+      case 5:
         setImage(cry);
         setText("Okay, last chance (Seriously) will you be my valentines?")
         setYesButton("text-8xl");
@@ -86,7 +93,7 @@ function App() {
             }
             
 
-            {clicks !== 4  && !done ?
+            {clicks !== 5  && !done ?
             <button  className={`bg-blue-300 rounded-2xl p-2 px-3  hover:bg-blue-400 ${noButton}`} onClick={handleNo}>No</button> 
             :
             <></>
