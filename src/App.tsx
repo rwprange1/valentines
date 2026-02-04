@@ -69,14 +69,14 @@ function App() {
 
   return (
     <div className='flex justify-center items-center bg-blue-300 w-full h-full'>
-      <div className="heart w-2/5 h-3/5 flex justify-center items-center relative">
-        <div className="flex flex-col gap-2 items-center -mt-30 justify-center w-full h-full">
+      <div className="heart w-3/5 h-3/5 flex justify-center items-center relative">
+        <div className="flex flex-col  items-center -mt-30 justify-center w-full h-full">
           
-          <div className="h-1/4 w-1/3 mb-10 ">
-            <img src={image} alt="Anvil" />
-          </div>
+         
+          <img className="h-1/4 w-1/3 " src={image} alt="Anvil" />
+         
 
-          <h2 className="mt-7 text-2xl text-center text-white  font-bold">{text}</h2>
+          <h2 className="mt-7 text-2xl text-center text-white w-4/5  font-bold">{text}</h2>
           
           <div className="flex gap-2 mt-5 items-center ">
             
